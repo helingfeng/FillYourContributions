@@ -20,6 +20,7 @@ while n > 0:
     git_shell('git add .')
     command = commit_date.strftime('git commit --date="%a, %d %b %Y 15:43:51 +0800" -am "feat: test."')
     git_shell(command)
-    print(git_shell('git push'))
+    print(command)
 
+print(git_shell('git push'))
 print('done')
