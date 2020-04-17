@@ -10,7 +10,7 @@ def git_shell(git_command):
 
 
 date = datetime.now()
-n = 360
+n = 365
 
 while n > 0:
     commit_date = date - timedelta(days=n)
