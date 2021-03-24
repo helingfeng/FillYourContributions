@@ -19,7 +19,7 @@ while n > 0:
         f.write(commit_date.strftime("- %Y-%m-%d %H:%M:%S \n"))
     git_shell('git add .')
     git_shell('git commit -am "feat: test"')
-    command = commit_date.strftime('git commit --amend --date="%a, %d %b %Y 15:43:51 +0800"')
+    command = commit_date.strftime('git commit --amend -m --date="%a, %d %b %Y 15:43:51 +0800"')
     git_shell(command)
     print(git_shell('git push'))
 
