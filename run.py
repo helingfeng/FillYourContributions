@@ -18,9 +18,9 @@ while n > 0:
     with open("./README.md", 'a+') as f:
         f.write(commit_date.strftime("- %Y-%m-%d %H:%M:%S \n"))
     git_shell('git add .')
-    git_shell(r'git commit -am "feat: test"')
-    print(commit_date.strftime('git commit --amend --date="%a, %d %b %Y 15:43:51 +0800"'))
-    git_shell(commit_date.strftime('git commit --amend --date="%a, %d %b %Y 15:43:51 +0800" -z'))
+    git_shell('git commit -am "feat: test"')
+    str = commit_date.strftime('git commit --amend --date="%a, %d %b %Y 15:43:51 +0800" -z')
+    git_shell(str)
     print(git_shell('git push'))
 
 print('done')
