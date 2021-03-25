@@ -20,7 +20,7 @@ while n > 0:
     day_commits = random.randint(1, 6)
     while day_commits > 0:
         with open("./README.md", 'a+') as f:
-            f.write(commit_date.strftime("- %Y-%m-%d %H:%M:%S \n"))
+            f.write('*')
         git_shell('git add .')
         command = commit_date.strftime('git commit --date="%a, %d %b %Y 15:43:51 +0800" -am "feat: update."')
         git_shell(command)
